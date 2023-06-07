@@ -60,6 +60,13 @@ header {
   height: 85px;
   background: rgba(255, 255, 255, 0.53);
   backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all;
+}
+header.on{
+  opacity: 1;
+  visibility: visible;
 }
 header .gnb{
   height: 100%;
@@ -109,6 +116,9 @@ header .menu_wrap .menu a{
   font-size: 160px;
   color: #fff;
   text-transform: uppercase;
+}
+#main #home .center_txt p .dot{
+  color: #A7EED8;
 }
 #main .img_wrap{
   width: 100%;
