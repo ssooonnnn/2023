@@ -94,7 +94,9 @@ header .menu_wrap .menu a{
 #main #home .container{
   width: 100%;
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 168px 0;
+  position: relative;
+  z-index: 1;
 }
 #main #home .center_txt{
   width: 100%;
@@ -108,24 +110,69 @@ header .menu_wrap .menu a{
   color: #fff;
   text-transform: uppercase;
 }
-.light-2 .ani .elli-1{
+#main .img_wrap{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#main .img_wrap .elli{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#main .img_wrap .elli_1{
   width: 695px;
   height: 503px;
   position: absolute;
-  top: 19.5%;
-  left: 7%;
+  bottom: -6%;
+  left: 0%;
   animation: rotate 10s reverse infinite;
 }
-.light-2 .ani .elli-2{
+ #main .img_wrap .elli_2{
   width: 465px;
   height: 480px;
   position: absolute;
-  top: 19%;
-  left: 21%;
+  bottom: -6%;
+  left: 5%;
   animation: rotate 10s linear infinite;
 }
 @keyframes rotate {
   0%{
       transform: rotate(360deg);
   }
+}
+#main .img_wrap .four{
+  display: flex;
+  width: 210px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 8%;
+  top: 2%;
+  animation: wide 4s ease-in-out infinite;
+}
+#main .img_wrap .four span{
+  display: block;
+  margin-left: -40px;
+}
+@keyframes wide {
+  0%{
+    width:260px;
+  }
+  50%{
+    width:200px;
+  }
+  100%{
+    width:260px;
+  }
+}
+#main .img_wrap .star{
+  position: absolute;
+  bottom: 10%;
+  right: 8%;
+  width: 150px;
+  height: 150px;
 }
