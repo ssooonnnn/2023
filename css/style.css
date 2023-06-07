@@ -146,7 +146,7 @@ header .menu_wrap .menu a{
 }
 #main .img_wrap .four{
   display: flex;
-  width: 210px;
+  width: 170px;
   justify-content: space-between;
   align-items: center;
   position: absolute;
@@ -163,7 +163,7 @@ header .menu_wrap .menu a{
     width:260px;
   }
   50%{
-    width:200px;
+    width:170px;
   }
   100%{
     width:260px;
@@ -172,7 +172,7 @@ header .menu_wrap .menu a{
 #main .img_wrap .star{
   position: absolute;
   bottom: 10%;
-  right: 8%;
+  right: 18%;
   width: 150px;
   height: 150px;
 }
