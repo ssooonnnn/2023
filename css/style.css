@@ -91,3 +91,41 @@ header .menu_wrap .menu a{
 #main #home{
   background: #2C2A2A;
 }
+#main #home .container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+#main #home .center_txt{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main #home .center_txt .white{
+  font-weight: 700;
+  font-size: 160px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.light-2 .ani .elli-1{
+  width: 695px;
+  height: 503px;
+  position: absolute;
+  top: 19.5%;
+  left: 7%;
+  animation: rotate 10s reverse infinite;
+}
+.light-2 .ani .elli-2{
+  width: 465px;
+  height: 480px;
+  position: absolute;
+  top: 19%;
+  left: 21%;
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  0%{
+      transform: rotate(360deg);
+  }
+}
