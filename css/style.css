@@ -18,6 +18,9 @@ li {
 a {
   text-decoration: none;
 }
+img{
+  width: 100%;
+}
 /* cursor */
 *{
   cursor: none;
@@ -93,10 +96,11 @@ header .menu_wrap .menu a{
 #main section{
   width: 100%;
   height: 100vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 #main #home{
-  background: #2C2A2A;
+  /* background: #2C2A2A; */
+  background: url(../img/back.png) no-repeat center center /cover;
 }
 #main #home .container{
   width: 100%;
@@ -185,4 +189,48 @@ header .menu_wrap .menu a{
   right: 18%;
   width: 150px;
   height: 150px;
+}
+#main .img_wrap .item{
+  position: absolute;
+  top: 2%;
+  left: 6%;
+  width: 250px;
+}
+#main #home .scroll{
+  margin: 0 auto;
+}
+#main #home .scroll span{
+  display: block;
+  width: 5px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #d9d9d9;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+#main #home .scroll p{
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+}
+#main #home .scroll span::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 75px;
+  background-color: #171717;
+  z-index: 1;
+  transition: 0.5s all;
+  animation: scrDown 2s linear infinite;
+}
+@keyframes scrDown {
+  0%{top: 5%;}
+  100%{top: 100%;}
+}
+#main #career{
+  background: url(../img/sec2_bg.png) no-repeat center center /cover;
 }
