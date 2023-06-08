@@ -8,7 +8,7 @@ p{
   padding: 0;
 }
 body{
-  background: #2C2A2A;
+  background: #ffffff;
   overflow-x: hidden;
 }
 ul,
@@ -61,7 +61,7 @@ header {
   top: 0;
   left: 0;
   height: 85px;
-  background: rgba(255, 255, 255, 0.53);
+  background: rgba(255, 255, 255, 0.15);
   mix-blend-mode: exclusion;
   backdrop-filter: blur(15px);
   opacity: 0;
@@ -234,16 +234,16 @@ header .menu_wrap .menu a{
   }
 }
 .scrImg {
-  animation: rotate 1s linear infinite;
+  animation: scrRotate 1s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
-@keyframes rotate {
+@keyframes scrRotate {
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg) translateX(-100%);
   }
 }
 #main #home .scroll{
@@ -326,4 +326,23 @@ header .menu_wrap .menu a{
   100% {
       transform: rotateX(60deg) rotate(359.99deg) translate(-50%, -50%);
   }
+}
+
+#main #port{
+  background-color: #fff;
+}
+#main #port .container{}
+#main .title{
+  width: 80%;
+  padding:110px 0 ;
+  background: #131313;
+  margin-top: -500px;
+  position: relative;
+  z-index: 999;
+}
+#main .title p{
+  font-weight: 700;
+  font-size: 160px;
+  color: #fff;
+  margin-left: 210px;
 }
