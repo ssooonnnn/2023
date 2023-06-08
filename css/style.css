@@ -3,13 +3,13 @@
 p{
   font-family: 'Montserrat', sans-serif;
 }
-*,
-body {
+*{
   margin: 0;
   padding: 0;
 }
 body{
   background: #2C2A2A;
+  overflow-x: hidden;
 }
 ul,
 li {
@@ -62,10 +62,12 @@ header {
   left: 0;
   height: 85px;
   background: rgba(255, 255, 255, 0.53);
-  backdrop-filter: blur(5px);
+  mix-blend-mode: exclusion;
+  backdrop-filter: blur(15px);
   opacity: 0;
   visibility: hidden;
   transition: 0.5s all;
+  z-index: 9999;
 }
 header.on{
   opacity: 1;
@@ -136,7 +138,7 @@ header .menu_wrap .menu a{
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: scrElli 5s linear infinite;
+  animation: scrElli 10s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 
@@ -201,10 +203,23 @@ header .menu_wrap .menu a{
   width: 150px;
   height: 150px;
 }
+#main .img_wrap .smallStar{
+  position: absolute;
+  top: 10%;
+  left: 18%;
+  width: 79px;
+  height: 79px;
+  animation: rotate 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
 #main .img_wrap .item{
   position: absolute;
-  top: 2%;
-  left: 6%;
+  top: 16%;
+  left: 4%;
   width: 250px;
   animation: scrItem 1s linear infinite;
   animation-play-state: paused;
@@ -268,4 +283,47 @@ header .menu_wrap .menu a{
 }
 #main #career{
   background: url(../img/sec2_bg.png) no-repeat center center /cover;
+  overflow: hidden;
+  height: auto;
+}
+#main #career .container{
+  padding: 120px 0;
+}
+#main #career .cosmo{
+  position: relative;
+  width: 100%;
+}
+#main #career .cosmo .center{
+  width: 1366px;
+  position: relative;
+  z-index: 111;
+}
+#main #career .cosmo .center img{
+  width: 100%;
+}
+#main #career .cosmo .circle{
+  animation: spining 10s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+#main #career .cosmo .circle .img{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120vw;
+  height: 120vw;
+  transform: translate(-50%, -50%);
+  background: url("../img/spin.svg");
+  background-size: contain;
+}
+@keyframes spining {
+  0% {
+    transform: rotateX(60deg) rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+      transform: rotateX(60deg) rotate(359.99deg) translate(-50%, -50%);
+  }
 }
