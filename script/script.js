@@ -22,35 +22,14 @@ $(document).ready(function(){
     });
   })
 });
-    //scrollmagic controller
-    var controller = new ScrollMagic.Controller();
-    //animation object
-    var tween1 = TweenMax.to('.star', 0.5, {
-      scale: 2.5,
-      rotation: 180,
-      x: 130
-    });
-    //scene object
-    var scene = new ScrollMagic.Scene();
-    //Animation Object를 Scene Object에 추가
-    var scene = new ScrollMagic.Scene().setTween(tween1);
-    // Scene Object를 ScrollMaig Controller에 추가
-    var scene = new ScrollMagic.Scene()
-    .setTween(tween1)
-    .addTo(controller);
-    //scene이 일어날 트리거를 지정
-    var scene = new ScrollMagic.Scene({
-      triggerElement: "#trigger1"
-    })
-    .setTween(tween1)
-    .addTo(controller);
 
-	
-    var scene = new ScrollMagic.Scene({
-      triggerElement: "#trigger1"
-    })
-    .setTween(tween1)
-    .addTo(controller)
-    .addIndicators({
-      name: "1"
-    });
+window.addEventListener(
+  "scroll",
+  () => {
+    document.body.style.setProperty(
+      "--scroll",
+      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+    );
+  },
+  false
+);
