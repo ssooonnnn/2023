@@ -353,6 +353,7 @@ header .menu_wrap .menu a{
   display: flex;
   align-items: center;
   gap: 14px;
+  width: 30%;
 }
 #main #career .cont_wrap .git_link p{
   font-weight: 500;
