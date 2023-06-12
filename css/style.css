@@ -34,14 +34,14 @@ img{
 }
 .theBall,
 .theBall-outer{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   mix-blend-mode: exclusion;
 }
 .theBall-outer{
   position: fixed;
-  top: -20px;
-  left: -20px;
+  top: -40px;
+  left: -40px;
   z-index: 99999;
   pointer-events: none;
 }
@@ -51,9 +51,10 @@ img{
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-origin: center center;
 }
-.theBall-outer.zoom .theBall{
-  border-radius: 50%;
+.theBall-outer.zoom  .theBall{
+  border-radius: 100%;
   transform: scale(2.5);
+  background-color: #ffe5e5;
 }
 .theBall-outer.zoom2 .theBall{
   border-radius: 50%;
@@ -98,6 +99,7 @@ header .menu_wrap .menu{
 header .menu_wrap .menu a{
   color: #fff;
   font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
 }
 #main{
   width: 100%;
@@ -333,7 +335,6 @@ header .menu_wrap .menu a{
     transform: rotateX(60deg) rotate(359.99deg) translate(-50%, -50%);
   }
 }
-#main #career{}
 #main #career .cont_wrap{
   position: absolute;
   top: 35%;
@@ -344,7 +345,6 @@ header .menu_wrap .menu a{
   width: 80%;
   justify-content: space-between;
 }
-#main #career .cont_wrap .left_con{}
 #main #career .cont_wrap .chart{
   width: 332px;
   margin-left: 130px;
@@ -434,7 +434,6 @@ header .menu_wrap .menu a{
 #main #port{
   background-color: #fff;
 }
-#main #port .container{}
 #main .title{
   width: 80%;
   padding:110px 0 ;
