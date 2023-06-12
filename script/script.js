@@ -7,8 +7,8 @@ $(document).ready(function(){
     }else if(height <= 799){ 
         $('header').removeClass('on'); 
     } 
-  });
-      // cursor 
+  });//end 
+  // cursor 
   $(function() {
     var prefix = function() {
       var a = window.getComputedStyle(document.documentElement, ""),
@@ -20,16 +20,28 @@ $(document).ready(function(){
       mouseY = e.pageY - $(window).scrollTop() + 15;
       $('.theBall-outer').attr('style', prefix + 'transform:translate(' + mouseX + 'px,' + mouseY + 'px)');
     });
-  })
-});
-
-window.addEventListener(
-  "scroll",
-  () => {
-    document.body.style.setProperty(
-      "--scroll",
-      window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-    );
-  },
-  false
-);
+    $('header a').mouseenter(function(){
+      $('.theBall-outer').addClass('zoom');
+    });
+    $('header a').mouseleave(function(){
+      $('.theBall-outer').removeClass('zoom');
+    });
+    $('.git_link').mouseenter(function(){
+      $('.theBall-outer').addClass('zoom3');
+    });
+    $('.git_link').mouseleave(function(){
+      $('.theBall-outer').removeClass('zoom3');
+    });
+  })//end cursor
+  //scroll animation
+  window.addEventListener(
+    "scroll",
+    () => {
+      document.body.style.setProperty(
+        "--scroll",
+        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+      );
+    },
+    false
+  );//end scroll animation
+});//document end
