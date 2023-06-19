@@ -133,10 +133,16 @@ header .menu_wrap .menu a{
   text-transform: uppercase;
 }
 #main #home .center_txt p .dot{
-  color: #A7EED8;
+  color: #fff;
+  animation: colorChange 3s steps(1) infinite;
+}
+@keyframes colorChange {
+  0%{color: #fff;}
+  50%{color: #A7EED8;}
+  100%{color: #fff;}
 }
 #main #home .center_txt .opac{
-  animation: opac 5s steps(1) infinite;
+  animation: opac 3s steps(1) infinite;
 }
 #main #home .center_txt .opac:hover .yellow{
   opacity: 1;
@@ -154,6 +160,39 @@ header .menu_wrap .menu a{
 #main #home .center_txt .color{
   position: relative;
 }
+#main #home .center_txt .orange::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -80%;
+  transform: translate(-50%, -50%);
+  width: 85px;
+  height: 112px;
+  background: url(../img/orange.png) no-repeat center center /cover;
+  animation: opacRever 3s steps(1) infinite ;
+}
+#main #home .center_txt .green::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -70%;
+  transform: translate(-50%, -50%);
+  width: 199px;
+  height: 199px;
+  background: url(../img/green.png) no-repeat center center /cover;
+  animation: opacRever 3s steps(1) infinite ;
+}
+#main #home .center_txt .purple::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -95%;
+  transform: translate(-50%, -50%);
+  width: 92px;
+  height: 125px;
+  background: url(../img/my.png) no-repeat center center /cover;
+  animation: opacRever 3s steps(1) infinite ;
+}
 #main #home .center_txt .yellow::before{
   content: '';
   position: absolute;
@@ -163,18 +202,18 @@ header .menu_wrap .menu a{
   width: 120px;
   height: 120px;
   background: url(../img/yellow.png) no-repeat center center /cover;
-  animation: opacRever 5s steps(1) infinite ;
+  animation: opacRever 3s steps(1) infinite ;
 }
 #main #home .center_txt .blue::before{
   content: '';
   position: absolute;
   top: 50%;
-  left: -60%;
+  left: -70%;
   transform: translate(-50%, -50%);
   width: 124px;
   height: 124px;
   background: url(../img/blue.png) no-repeat center center /cover;
-  animation: opacRever 5s steps(1) infinite ;
+  animation: opacRever 3s steps(1) infinite ;
 }
 #main .img_wrap{
   width: 100%;
