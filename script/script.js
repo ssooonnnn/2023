@@ -44,4 +44,23 @@ $(document).ready(function(){
     },
     false
   );//end scroll animation
+  //tabmenu
+  // $('#port .btn li').click(function(e){
+  //   e.preventDefaultS();
+  //   var cate = $(this).attr('data-alt');
+  //   $('#port .tabs .num').fadeOut('slow');
+
+  //   if(cate == "all"){
+  //     $('#port .tabs .num').fadeIn('slow');
+  //   }else{
+  //     $('#port .tabs .num[class*="+cate+"]').fadeIn('slow');
+  //   }
+  // });
+  $("#port ul li").click(function(e){
+    e.preventDefault();
+    var category = $(this).attr("data-alt");
+    $("#port .tabs .num").fadeOut("slow");
+    if(category == "all"){$("#port .tabs .num").fadeIn("slow");}
+    else{$("#port .tabs .num[class*="+category+"]").fadeIn("slow");}
+    });
 });//document end
