@@ -375,9 +375,9 @@ header .menu_wrap .menu a{
   overflow: hidden;
   height: auto;
 }
-#main #career .container{
+/* #main #career .container{
   padding: 120px 0;
-}
+} */
 #main #career .cosmo{
   position: relative;
   width: 100%;
@@ -517,7 +517,7 @@ header .menu_wrap .menu a{
 }
 #main .title{
   width: 80%;
-  padding:110px 0 ;
+  padding:60px 0 90px;
   background: #131313;
   margin-top: -500px;
   position: relative;
@@ -525,7 +525,7 @@ header .menu_wrap .menu a{
 }
 #main .title p{
   font-weight: 700;
-  font-size: 160px;
+  font-size: 100px;
   color: #fff;
   margin-left: 210px;
 }
@@ -533,8 +533,12 @@ header .menu_wrap .menu a{
   position: relative;
   padding: 120px 0;
 }
-#main #port .tab_inner{}
+#main #port .tab_inner {
+  padding-top: 180px;
+  position: relative;
+}
 #main #port .tab_inner .btn{
+  position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 50%;
   width: 140px;
@@ -570,7 +574,11 @@ header .menu_wrap .menu a{
 #main #port .tabs .num{
   width: 300px ;
   height: 420px;
+  border: 1px solid #7d7d7d;
   /* display: none; */
+}
+#main #port .tabs .num:hover{
+  backdrop-filter:blur(4px) ;
 }
 #main #port .tabs .num.land{
   background-color: #7ed5e0;
