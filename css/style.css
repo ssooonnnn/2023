@@ -58,7 +58,7 @@ img{
 }
 .theBall-outer.zoom2 .theBall{
   border-radius: 50%;
-  transform: scale(5);
+  transform: scale(4);
 }
 .theBall-outer.zoom3 .theBall{
   transform: scaleY(2) scaleX(5);
@@ -132,6 +132,7 @@ header .menu_wrap .menu a{
   color: #fff;
   text-transform: uppercase;
 }
+
 #main #home .center_txt p .dot{
   color: #fff;
   animation: colorChange 3s steps(1) infinite;
@@ -142,6 +143,7 @@ header .menu_wrap .menu a{
   100%{color: #fff;}
 }
 #main #home .center_txt .opac{
+  transition: 0.5s all;
   animation: opac 3s steps(1) infinite;
 }
 #main #home .center_txt .opac:hover .yellow{
@@ -159,6 +161,7 @@ header .menu_wrap .menu a{
 }
 #main #home .center_txt .color{
   position: relative;
+  transition: 0.5s all;
 }
 #main #home .center_txt .orange::before{
   content: '';
@@ -553,38 +556,58 @@ header .menu_wrap .menu a{
   width: 120px;
   font-weight: 600;
   font-size: 16px;
-  color: #131313;
+  color: #fff;
+  background-color: #121212;
   padding: 10px 16px;
   line-height: 2;
   text-align: center;
   border: 1px solid #a2a2a2;
 }
 #main #port .tab_inner .btn li:hover{
-  background-color: #000000;
-  color: #fff;
+  background-color: #e8e8e8;
+  color: #121212;
 }
 #main #port .tabs{
-  width: 1400px;
+  width: 57.916%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
   row-gap: 20px;
+  column-gap: 16px;
   margin-top: -210px;
 }
 #main #port .tabs .num{
-  width: 300px ;
-  height: 420px;
+  position: relative;
+  width: 360px;
   border: 1px solid #7d7d7d;
   /* display: none; */
 }
-#main #port .tabs .num:hover{
+#main #port .tabs .num:hover::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter:blur(4px) ;
 }
-#main #port .tabs .num.land{
-  background-color: #7ed5e0;
+#main #port .tabs .num:hover::after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
+  z-index: 1;
+  background: url(../img/icon_plus.png) no-repeat center center/cover;
 }
-#main #port .tabs .num.busi{
-  background-color: #dcde93;
+#main #port .tabs .num .bg,
+#main #port .tabs .num .bg img{
+  width: 100%;
+  height: 100%;
 }
 /* #main #port .tabs .num.active{
   display: block;
