@@ -1,4 +1,10 @@
 $(document).ready(function(){
+  AOS.init({
+    disable: function() {
+      var maxWidth = 800;
+      return window.innerWidth < maxWidth;
+    }
+  });
   $(window).scroll(function(){ 
     var height = $(document).scrollTop(); //실시간으로 스크롤의 높이를 측정
     // console.log(height)
