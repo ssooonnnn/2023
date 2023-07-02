@@ -532,6 +532,16 @@ header .menu_wrap .menu a{
   position: relative;
   padding: 120px 0;
 }
+#main #port::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background: rgb(34 34 34 / 77%);
+}
 #main #port .tab_inner {
   padding-top: 180px;
   position: relative;
@@ -608,6 +618,59 @@ header .menu_wrap .menu a{
 /* #main #port .tabs .num.active{
   display: block;
 } */
+#main #port .modal_wrap{
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 800px;
+  background-color: #ededed;
+  border-radius: 30px;
+  padding: 10px;
+  z-index: 9999;
+  /* box-shadow: 10px 0 10px 0 rgba(255, 255, 255, 0.3); */
+  /* backdrop-filter: drop-shadow(0 3px 10px 0 rgba(255, 255, 255, 0.3)); */
+  /* display: none; */
+}
+#main #port .modal_wrap .m_head{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+#main #port .modal_wrap .m_head .close{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+#main #port .modal_wrap .m_head .close span{
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #171717;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#main #port .modal_wrap .m_head .close span:first-child{
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+#main #port .modal_wrap .m_head .close span:last-child{
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#main #port .modal_wrap .m_con{}
+#main #port .modal_wrap .m_con .mask{
+  height: 580px;
+  padding: 0 2%;
+  margin-top: 10px;
+  background: #877B7B;
+}
+#main #port .modal_wrap .m_con .desc{
+  margin-top: 30px;
+}
+/* 푸터 */
 footer{
   width: 100%;
   background-color: #171717;
