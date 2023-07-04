@@ -64,4 +64,12 @@ $(document).ready(function(){
     if(category == "all"){$("#port .tabs .num").fadeIn("slow");}
     else{$("#port .tabs .num[class*="+category+"]").fadeIn("slow");}
     });
+
+    $('#port .tabs .num').click(function(){
+      $(this).find('modal').addClass('on');
+
+    });
+    $('#port .modal .close').click(function(){
+
+    });
 });//document end
