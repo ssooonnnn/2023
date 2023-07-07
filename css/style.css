@@ -651,7 +651,6 @@ header .menu_wrap .menu a{
 #main #port .modal .m_head .close span:last-child{
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-#main #port .modal .m_con{}
 #main #port .modal .m_con .mask{
   height: 580px;
   padding: 0 2%;
