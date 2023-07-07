@@ -605,11 +605,27 @@ header .menu_wrap .menu a{
 /* #main #port .tabs .num.active{
   display: block;
 } */
+#main #port .modal{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: none;
+  /* box-shadow: 10px 0 10px 0 rgba(255, 255, 255, 0.3); */
+  /* backdrop-filter: drop-shadow(0 3px 10px 0 rgba(255, 255, 255, 0.3)); */
+  /* display: none; */
+}
 #main #port .modal.on{
   display: block;
 }
-#main #port .modal{
-  position:fixed;
+#main #port .modal_wrap{
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -619,10 +635,6 @@ header .menu_wrap .menu a{
   border-radius: 30px;
   padding: 10px;
   z-index: 9999;
-  display: none;
-  /* box-shadow: 10px 0 10px 0 rgba(255, 255, 255, 0.3); */
-  /* backdrop-filter: drop-shadow(0 3px 10px 0 rgba(255, 255, 255, 0.3)); */
-  /* display: none; */
 }
 #main #port .modal .m_head{
   display: flex;
@@ -653,9 +665,10 @@ header .menu_wrap .menu a{
 }
 #main #port .modal .m_con .mask{
   height: 580px;
-  padding: 0 2%;
+  /* padding: 0 2%; */
   margin-top: 10px;
   background: #877B7B;
+  overflow-y: scroll;
 }
 #main #port .modal .m_con .desc{
   margin-top: 30px;

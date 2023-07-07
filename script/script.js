@@ -65,11 +65,10 @@ $(document).ready(function(){
     else{$("#port .tabs .num[class*="+category+"]").fadeIn("slow");}
     });
 
-    $('#port .tabs .num').click(function(){
-      $(this).find('modal').addClass('on');
-
-    });
-    $('#port .modal .close').click(function(){
-
-    });
+  $('#port .tabs .num').click(function(){
+    $('#port .modal').addClass('on');
+  });
+  $('#port .modal .m_head .close').click(function(){
+    $(this).parents('#port .modal').removeClass('on');
+  });
 });//document end
