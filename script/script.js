@@ -65,6 +65,7 @@ $(document).ready(function(){
     else{$("#port .tabs .num[class*="+category+"]").fadeIn("slow");}
   });
   $('#port .tabs .num').click(function(){
+    // e.preventDefault();
     $('#port .modal').addClass('on');
   });
   $(document).on('click', '#port .modal .close', function() {
