@@ -63,12 +63,12 @@ $(document).ready(function(){
     $("#port .tabs .num").fadeOut("slow");
     if(category == "all"){$("#port .tabs .num").fadeIn("slow");}
     else{$("#port .tabs .num[class*="+category+"]").fadeIn("slow");}
-    });
-
+  });
   $('#port .tabs .num').click(function(){
     $('#port .modal').addClass('on');
   });
-  $('#port .modal .m_head .close').click(function(){
-    $(this).parents('#port .modal').removeClass('on');
+  $(document).on('click', '#port .modal .close', function() {
+    $('#port .modal').removeClass('on');
   });
+
 });//document end
