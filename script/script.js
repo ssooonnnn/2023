@@ -64,12 +64,17 @@ $(document).ready(function(){
     if(category == "all"){$("#port .tabs .num").fadeIn("slow");}
     else{$("#port .tabs .num[class*="+category+"]").fadeIn("slow");}
   });
-  $('#port .tabs .num').click(function(){
-    // e.preventDefault();
-    $('#port .modal').addClass('on');
+  
+  $('#port .tabs .num').click(function() {
+    var modal = $(this).find('.modal');
+    modal.addClass('on');
   });
   $(document).on('click', '#port .modal .close', function() {
     $('#port .modal').removeClass('on');
   });
+  // $('#port .modal .close').click(function() {
+  //   var modal = $(this).closest('.modal');
+  //   modal.removeClass('on');
+  // });
 
 });//document end
