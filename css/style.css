@@ -667,11 +667,30 @@ header .menu_wrap .menu a{
   height: 580px;
   /* padding: 0 2%; */
   margin-top: 10px;
-  background: #877B7B;
   overflow-y: scroll;
+}
+#main #port .modal .desc_area{
+  padding: 10px 0;
+}
+#main #port .modal .desc_area .tit{
+  font-weight: 600;
+  font-size: 20px;
+  color: #131313;
+  text-align: center;
 }
 #main #port .modal .m_con .desc{
   margin-top: 30px;
+}
+#main #port .modal .desc_area a{
+  display: block;
+  width: 180px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+  background-color: #171717;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
 }
 /* 푸터 */
 footer{
