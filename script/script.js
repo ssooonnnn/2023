@@ -38,6 +38,9 @@ $(document).ready(function(){
     $('#port .tabs .num').mouseleave(function(){
       $('.theBall-outer').removeClass('zoom2');
     });
+    $('#port .tabs .num .modal').mouseenter(function(){
+      $('.theBall-outer').removeClass('zoom2');
+    });
     $('.git_link').mouseenter(function(){
       $('.theBall-outer').addClass('zoom3');
     });
