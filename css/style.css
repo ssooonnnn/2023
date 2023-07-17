@@ -63,6 +63,7 @@ img{
 .theBall-outer.zoom3 .theBall{
   transform: scaleY(2) scaleX(5);
 }
+/* 헤더 */
 header {
   width: 100%;
   position: fixed;
@@ -115,6 +116,11 @@ header .menu_wrap .menu a{
   padding: 168px 0;
   position: relative;
   z-index: 1;
+}
+#main #home p.notice{
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
 }
 #main #home .center_txt{
   width: 100%;
@@ -669,6 +675,20 @@ header .menu_wrap .menu a{
   margin-top: 10px;
   overflow-y: scroll;
 }
+.scrollbar::-webkit-scrollbar{
+  width: 12px;
+}
+.scrollbar::-webkit-scrollbar-thumb{
+  background-color: #5d5d5d;
+  background-clip: padding-box;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+.scrollbar::-webkit-scrollbar-track{
+  background-color: #cfcfcf;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px #ededed;
+}
 #main #port .modal .desc_area{
   padding: 10px 0;
 }
@@ -707,6 +727,7 @@ footer #contact .ft_head{
   font-weight: 600;
   font-size: 40px;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 footer #contact ul li{
   display: flex;
