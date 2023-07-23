@@ -1,7 +1,7 @@
 $(document).ready(function(){
   AOS.init({
     disable: function() {
-      var maxWidth = 800;
+      var maxWidth = 1100;
       return window.innerWidth < maxWidth;
     }
   });
