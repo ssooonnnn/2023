@@ -792,11 +792,37 @@ footer #contact ul li a{
   #main #port .tab_inner{
     padding-top: 120px;
   }
+  #main #career .cont_wrap{
+    align-items: center;
+  }
+  #main #career .cont_wrap .chart{
+    width: 245px;
+    margin-left: 35px;
+  }
+  #main #career .cont_wrap .career_list .tt{
+    font-size: 20px;
+  }
   #main #career .cont_wrap .career_list{
     margin-top: 15px;
   }
   #main #career .cont_wrap .career_list ul p.date{
     font-size: 22px;
+  }
+  #main #career .cont_wrap .career_list ul p.work{
+    margin-top: 8px;
+  }
+  #main #career .cont_wrap .right_con{
+    width: 500px;
+    height: 500px;
+  }
+  #main #career .cont_wrap .tit{
+    font-size: 20px;
+  }
+  #main #career .cont_wrap .txt_area ul li p{
+    font-size: 16px;
+  }
+  #main #career .cosmo .center {
+    width: 906px;
   }
 }
 @media (max-width:1200px) {
