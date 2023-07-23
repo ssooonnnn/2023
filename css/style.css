@@ -470,6 +470,7 @@ header .menu_wrap .menu a{
   font-size: 16px;
   margin-top: 15px;
   font-family: 'Noto Sans KR', sans-serif;
+  word-break: keep-all;
 }
 #main #career .cont_wrap .right_con{
   /* position: absolute; */
@@ -699,7 +700,15 @@ header .menu_wrap .menu a{
   text-align: center;
 }
 #main #port .modal .m_con .desc{
-  margin-top: 30px;
+  margin: 20px 0;
+}
+#main #port .modal .m_con .desc p{
+  font-size: 16px;
+  color: #121212;
+  word-break: keep-all;
+}
+#main #port .modal .m_con .desc p.sub{
+  margin-bottom: 8px;
 }
 #main #port .modal .desc_area a{
   display: block;
@@ -774,13 +783,43 @@ footer #contact ul li a{
     margin-bottom: 16px;
   }
 }
+@media (max-width:1540px) {
+  #main #port .modal .m_con .mask{
+    height: 490px;
+  }
+}
 @media (max-width:1440px) {
   #main #port .tab_inner{
     padding-top: 120px;
+  }
+  #main #career .cont_wrap .career_list{
+    margin-top: 15px;
+  }
+  #main #career .cont_wrap .career_list ul p.date{
+    font-size: 22px;
   }
 }
 @media (max-width:1200px) {
   #main .title{
     padding: 60px 0;
+  }
+  #main .title p{
+    margin-left: 80px;
+  }
+  #main #port .tab_inner{
+    padding-top: 85px;
+  }
+  #main #port .tab_inner .btn{
+    position: static;
+    top: auto;
+    width: auto;
+    transform: translateY(0);
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  #main #port .tabs{
+    width: 85%;
+    margin-top: 0;
   }
 }
