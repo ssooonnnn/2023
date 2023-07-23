@@ -826,6 +826,57 @@ footer #contact ul li a{
   }
 }
 @media (max-width:1200px) {
+  #main #home .container{
+    padding: 120px 0;
+  }
+  #main #home .center_txt .white{
+    font-size: 100px;
+  }
+  #main #home .center_txt .orange::before{
+    width: 55px;
+    height: 82px;
+  }
+  #main #home .center_txt .green::before{
+    width: 119px;
+    height: 119px;
+  }
+  #main #home .center_txt .purple::before{
+    width: 62px;
+    height: 87px;
+  }
+  #main #home .center_txt .yellow::before{
+    width: 90px;
+    height: 90px;
+  }
+  #main #home .center_txt .blue::before{
+    width: 84px;
+    height: 84px;
+  }
+  #main .img_wrap .item{
+    width: 200px;
+    top: 9%;
+    left: 0%;
+  }
+  #main .img_wrap .elli_1{
+    width: 495px;
+    height: 303px;
+    bottom: -5%;
+    left: -10%;
+  }
+  #main .img_wrap .elli_2{
+    width: 265px;
+    height: 280px;
+  }
+  #main .img_wrap .star {
+    bottom: 22%;
+    right: 6%;
+    width: 120px;
+    height: 120px;
+  }
+  #main .img_wrap .smallStar{
+    top: 10%;
+    left: 15%;
+  }
   #main .title{
     padding: 60px 0;
   }
