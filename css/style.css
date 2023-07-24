@@ -15,7 +15,7 @@ p{
   padding: 0;
 }
 body{
-  background: #ffffff;
+  background: #171717;
   overflow-x: hidden;
 }
 ul,
@@ -107,7 +107,6 @@ header .menu_wrap .menu a{
   width: 100%;
 }
 #main #home{
-  /* background: #2C2A2A; */
   background: url(../img/back.png) no-repeat center center /cover;
 }
 #main #home .container{
@@ -825,6 +824,19 @@ footer #contact ul li a{
     width: 906px;
   }
 }
+@media (max-width:1330px) {
+  #main #career .cont_wrap .right_con{
+    position: static;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  #main #career .cont_wrap .right_con::before{
+    display: none;
+  }
+}
 @media (max-width:1200px) {
   #main #home .container{
     padding: 120px 0;
@@ -899,4 +911,147 @@ footer #contact ul li a{
     width: 85%;
     margin-top: 0;
   }
+}
+@media (max-width:920px) {
+  #main #career .cont_wrap{
+    flex-direction: column;
+    top: 50%;
+    width: auto;
+  }
+  #main #career .cont_wrap .right_con{
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+  }
+  #main #career .cosmo .center{
+    width: auto;
+  }
+  #main #career .cont_wrap .chart{
+    display: none;
+  }
+  #main #career .cont_wrap .career_list{
+    display: block;
+    text-align: center;
+  }
+  #main #career .cont_wrap .tit{
+    color: #121212;
+  }
+  #main #career .cont_wrap .txt_area ul li p{
+   color: #131313;
+  }
+  #main #career .cont_wrap .git_link{
+    width: auto;
+    justify-content: center;
+  }
+  #main .title{
+    padding: 30px 0;
+    width: 85%;
+    margin-top: -220px;
+  }
+  #main .title p {
+    font-size: 40px;
+    margin-left: 60px;
+  }
+}
+@media (max-width:768px) {
+  #main #home .container{
+    padding: 160px 0;
+  }
+  #main #home p.notice {
+    font-size: 12px;
+  }
+  #main #home .center_txt .white{
+    font-size: 60px;
+  }
+  #main #home .center_txt .orange::before{
+    width: 34px;
+    height: 44px;
+  }
+  #main #home .center_txt .green::before{
+    width: 69px;
+    height: 69px;
+  }
+  #main #home .center_txt .purple::before{
+    width: 38px;
+    height: 49px;
+  }
+  #main #home .center_txt .yellow::before{
+    width: 60px;
+    height: 60px;
+  }
+  #main #home .center_txt .blue::before{
+    width: 50px;
+    height: 50px;
+  }
+  #main .img_wrap .item{
+    width: 90px;
+    top: 9%;
+    left: 0%;
+  }
+  #main .img_wrap .elli_1{
+    width: 495px;
+    height: 303px;
+    bottom: -5%;
+    left: -10%;
+  }
+  #main .img_wrap .elli_2{
+    width: 265px;
+    height: 280px;
+  }
+  #main .img_wrap .star {
+    width: 70px;
+    height: 70px;
+  }
+  #main .img_wrap .smallStar{
+    top: 3%; 
+    width: 39px;
+    height: 39px;
+  }
+  #main #home .scroll span{
+    width: 3px;
+    height: 30px;
+  }
+  #main #career .container{
+    padding: 60px 0 40px;
+  }
+
+}
+@media (max-width:680px) {
+  #main #career .cont_wrap .career_list ul p.date {
+    font-size: 16px;
+    margin-top: 8px;
+  } 
+  #main #career .cont_wrap .career_list ul p.place{
+    font-size: 18px;
+  }
+  #main #career .cont_wrap .career_list ul p.work{
+    font-size: 15px;
+  }
+  #main #career .cont_wrap .tit{
+    margin-bottom: 20px;
+  }
+  #main #career .cont_wrap .txt_area ul li p{
+    margin-bottom: 8px;
+  }
+  #main #port .tabs{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width:600px) {
+  #main #career .cosmo{
+    height: 100vh;
+  }
+  #main #career .cosmo .center{
+    width: 1000px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #main #career .cont_wrap{
+    width: 90%;
+  }
+}
+@media (max-width:500px) {
+  
 }
