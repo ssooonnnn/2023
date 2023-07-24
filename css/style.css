@@ -63,45 +63,7 @@ img{
 .theBall-outer.zoom3 .theBall{
   transform: scaleY(2) scaleX(5);
 }
-/* 헤더 */
-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 85px;
-  background: rgba(255, 255, 255, 0.15);
-  mix-blend-mode: exclusion;
-  backdrop-filter: blur(15px);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.5s all;
-  z-index: 9999;
-}
-header.on{
-  opacity: 1;
-  visibility: visible;
-}
-header .gnb{
-  height: 100%;
-}
-header .menu_wrap{
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  height: 100%;
-}
-header .menu_wrap .menu{
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header .menu_wrap .menu a{
-  color: #fff;
-  font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
-}
+
 #main,
 #main section{
   width: 100%;
@@ -720,36 +682,7 @@ header .menu_wrap .menu a{
   font-size: 16px;
   text-align: center;
 }
-/* 푸터 */
-footer{
-  width: 100%;
-  background-color: #171717;
-  padding: 60px 0;
-}
-footer p{
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-}
-footer #contact .ft_head{
-  font-weight: 600;
-  font-size: 40px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-footer #contact ul li{
-  display: flex;
-  justify-content: center;
-}
-footer #contact ul li p:first-child{
-  margin-bottom: 10px;
-}
-footer #contact ul li a{
-  font-size: 16px;
-  color: #171717;
-  background: #fff;
-  padding: 8px 12px;
-}
+
 @media (max-width:1680px) {
   #main #port .tabs{
     width: 70%;
@@ -962,6 +895,7 @@ footer #contact ul li a{
   }
   #main #home .center_txt .white{
     font-size: 60px;
+    margin-bottom: 100px;
   }
   #main #home .center_txt .orange::before{
     width: 34px;
@@ -989,7 +923,7 @@ footer #contact ul li a{
     left: 0%;
   }
   #main .img_wrap .elli_1{
-    width: 495px;
+    width: 385px;
     height: 303px;
     bottom: -5%;
     left: -10%;
@@ -1014,7 +948,12 @@ footer #contact ul li a{
   #main #career .container{
     padding: 60px 0 40px;
   }
-
+  #main #port .modal_wrap{
+    width: 440px;
+  }
+  #main #port .modal .m_con .mask {
+    height: 400px;
+  }
 }
 @media (max-width:680px) {
   #main #career .cont_wrap .career_list ul p.date {
@@ -1051,7 +990,106 @@ footer #contact ul li a{
   #main #career .cont_wrap{
     width: 90%;
   }
+  #main #port .tab_inner .btn{
+    margin: 0 auto 24px;
+    gap: 8px;
+  }
+  #main #port .tab_inner .btn li{
+    width: 100px;
+  }
 }
 @media (max-width:500px) {
-  
+  #main #home .center_txt .white{
+    font-size: 40px;
+  }
+  #main #home .center_txt .orange::before{
+    width: 23px;
+    height: 30px;
+  }
+  #main #home .center_txt .green::before{
+    width: 33px;
+    height: 43px;
+  }
+  #main #home .center_txt .purple::before{
+    width: 24px;
+    height: 30px;
+  }
+  #main #home .center_txt .yellow::before{
+    width: 40px;
+    height: 40px;
+  }
+  #main #home .center_txt .blue::before{
+    width: 32px;
+    height: 32px;
+  }
+  #main #port .modal .desc_area .tit{
+    font-size: 18px;
+  }
+  #main #port .modal .m_con .desc p{
+    font-size: 14px;
+  }
+  #main #port .modal .desc_area a{
+    font-size: 14px;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+  }
+  #main .img_wrap .elli_1{
+    left: -35%;
+  }
+  #main .img_wrap .elli_2{
+    left: -30%;
+  }
+  #main .img_wrap .four span svg{
+    width: 40px;
+    height: 95px;
+  }
+  #main .title p{
+    font-size: 26px;
+  }
+  #main #port .tab_inner {
+    padding-top: 55px;  
+  }
+  #main #port .tab_inner .btn li{
+    width: auto;
+  }
+  #main #port .tabs{
+    width: 95%;
+    row-gap: 16px;
+    column-gap: 10px;
+  }
+  #main #port .modal_wrap{
+    width: 340px;
+  }
+  #main #port .modal .m_con .mask{
+    height: 360px;
+  }
+  @keyframes wide {
+   0% {
+      width: 84px;
+    }
+    50% {
+        width: 120px;
+    }
+    100% {
+        width: 84px;
+    }
+  }
+}
+@media (max-width:375px) {
+  #main #port .modal_wrap{
+    width: 270px;
+  }
+  #main #port .modal .m_con .mask{
+    height: 300px;
+  }
+  #main #port .modal .m_con .desc p {
+    font-size: 12px;
+  }
+  #main #port .modal .m_con .desc {
+    margin: 10px 0;
+  }
+  #main #port .modal .m_con .desc p.sub {
+    margin-bottom: 4px;
+}
 }
