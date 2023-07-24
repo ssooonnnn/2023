@@ -1,0 +1,30 @@
+/* 푸터 */
+footer{
+   width: 100%;
+   background-color: #171717;
+   padding: 60px 0;
+}
+footer p{
+   color: #fff;
+   font-size: 30px;
+   text-align: center;
+}
+footer #contact .ft_head{
+   font-weight: 600;
+   font-size: 40px;
+   text-transform: uppercase;
+   margin-bottom: 16px;
+}
+footer #contact ul li{
+   display: flex;
+   justify-content: center;
+}
+footer #contact ul li p:first-child{
+   margin-bottom: 10px;
+}
+footer #contact ul li a{
+   font-size: 16px;
+   color: #171717;
+   background: #fff;
+   padding: 8px 12px;
+}
