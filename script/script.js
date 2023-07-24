@@ -15,39 +15,97 @@ $(document).ready(function(){
     } 
   });//end 
   // cursor 
+  // $(function() {
+  //   var prefix = function() {
+  //     var a = window.getComputedStyle(document.documentElement, ""),
+  //       b = (Array.prototype.slice.call(a).join("").match(/-(moz|webkit|ms)-/) || "" === a.OLink && ["", "o"])[1];
+  //     return "WebKit|Moz|MS|O".match(new RegExp("(" + b + ")", "i"))[1], "-" + b + "-"
+  //   }();
+  //   $(document).mousemove(function(e) {
+  //     mouseX = e.pageX + 15;
+  //     mouseY = e.pageY - $(window).scrollTop() + 15;
+  //     $('.theBall-outer').attr('style', prefix + 'transform:translate(' + mouseX + 'px,' + mouseY + 'px)');
+  //   });
+  //   $('header a').mouseenter(function(){
+  //     $('.theBall-outer').addClass('zoom');
+  //   });
+  //   $('header a').mouseleave(function(){
+  //     $('.theBall-outer').removeClass('zoom');
+  //   });
+  //   $('#port .tabs .num').mouseenter(function(){
+  //     $('.theBall-outer').addClass('zoom2');
+  //   });
+  //   $('#port .tabs .num').mouseleave(function(){
+  //     $('.theBall-outer').removeClass('zoom2');
+  //   });
+  //   $('#port .tabs .num .modal').mouseenter(function(){
+  //     $('.theBall-outer').removeClass('zoom2');
+  //   });
+  //   $('.git_link').mouseenter(function(){
+  //     $('.theBall-outer').addClass('zoom3');
+  //   });
+  //   $('.git_link').mouseleave(function(){
+  //     $('.theBall-outer').removeClass('zoom3');
+  //   });
+  // })
+  //end cursor
+
   $(function() {
     var prefix = function() {
       var a = window.getComputedStyle(document.documentElement, ""),
         b = (Array.prototype.slice.call(a).join("").match(/-(moz|webkit|ms)-/) || "" === a.OLink && ["", "o"])[1];
       return "WebKit|Moz|MS|O".match(new RegExp("(" + b + ")", "i"))[1], "-" + b + "-"
     }();
-    $(document).mousemove(function(e) {
-      mouseX = e.pageX + 15;
-      mouseY = e.pageY - $(window).scrollTop() + 15;
-      $('.theBall-outer').attr('style', prefix + 'transform:translate(' + mouseX + 'px,' + mouseY + 'px)');
+  
+    function checkWindowWidth() {
+      if ($(window).width() > 500) {
+        // Enable the script
+        $(document).mousemove(function(e) {
+          mouseX = e.pageX + 15;
+          mouseY = e.pageY - $(window).scrollTop() + 15;
+          $('.theBall-outer').attr('style', prefix + 'transform:translate(' + mouseX + 'px,' + mouseY + 'px)');
+        });
+        $('header a').mouseenter(function(){
+          $('.theBall-outer').addClass('zoom');
+        });
+        $('header a').mouseleave(function(){
+          $('.theBall-outer').removeClass('zoom');
+        });
+        $('#port .tabs .num').mouseenter(function(){
+          $('.theBall-outer').addClass('zoom2');
+        });
+        $('#port .tabs .num').mouseleave(function(){
+          $('.theBall-outer').removeClass('zoom2');
+        });
+        $('#port .tabs .num .modal').mouseenter(function(){
+          $('.theBall-outer').removeClass('zoom2');
+        });
+        $('.git_link').mouseenter(function(){
+          $('.theBall-outer').addClass('zoom3');
+        });
+        $('.git_link').mouseleave(function(){
+          $('.theBall-outer').removeClass('zoom3');
+        });
+      } else {
+        // Disable the script
+        $(document).off('mousemove');
+        $('header a').off('mouseenter mouseleave');
+        $('#port .tabs .num').off('mouseenter mouseleave');
+        $('#port .tabs .num .modal').off('mouseenter');
+        $('.git_link').off('mouseenter mouseleave');
+      }
+    }
+  
+    //page load
+    checkWindowWidth();
+  
+    //window resize
+    $(window).on('resize', function() {
+      checkWindowWidth();
     });
-    $('header a').mouseenter(function(){
-      $('.theBall-outer').addClass('zoom');
-    });
-    $('header a').mouseleave(function(){
-      $('.theBall-outer').removeClass('zoom');
-    });
-    $('#port .tabs .num').mouseenter(function(){
-      $('.theBall-outer').addClass('zoom2');
-    });
-    $('#port .tabs .num').mouseleave(function(){
-      $('.theBall-outer').removeClass('zoom2');
-    });
-    $('#port .tabs .num .modal').mouseenter(function(){
-      $('.theBall-outer').removeClass('zoom2');
-    });
-    $('.git_link').mouseenter(function(){
-      $('.theBall-outer').addClass('zoom3');
-    });
-    $('.git_link').mouseleave(function(){
-      $('.theBall-outer').removeClass('zoom3');
-    });
-  })//end cursor
+  });
+  
+
   //scroll animation
   window.addEventListener(
     "scroll",
